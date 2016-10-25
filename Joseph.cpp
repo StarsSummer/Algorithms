@@ -10,7 +10,7 @@ typedef struct Loop{
 	struct Loop *next;
 }Loop, *LinkList;
 	
-LinkList CreateLoop(int n){                        //´´½¨Ñ­»·Á´±í 
+LinkList CreateLoop(int n){                        //åˆ›å»ºå¾ªçŽ¯é“¾è¡¨ 
     LinkList p,q,head;
     int i;
     p=(LinkList)malloc(sizeof(Loop));
@@ -28,11 +28,11 @@ LinkList CreateLoop(int n){                        //´´½¨Ñ­»·Á´±í
 	p->next=head;
 	return head;
 }
-void begin(LinkList head,int n){                   //Ô¼Éª·òÎÊÌâÖ´ÐÐ¹ý³Ì 
+void begin(LinkList head,int n){                   //çº¦ç‘Ÿå¤«é—®é¢˜æ‰§è¡Œè¿‡ç¨‹ 
     int i,m;
     m=n;
     LinkList p=head,q;
-    printf("³öÁÐµÄË³ÐòÎª£º");
+    printf("å‡ºåˆ—çš„é¡ºåºä¸ºï¼š");
     while(p->next!=p)
     {
     	for(i=1;i<m;i++)
@@ -54,22 +54,22 @@ int main()
 {
 
 	int i,m,num; 
-	printf("ÇëÊäÈëÔ¼Éª·ò»·ÖÐµÄÈËÊý: ");
+	printf("è¯·è¾“å…¥çº¦ç‘Ÿå¤«çŽ¯ä¸­çš„äººæ•°: ");
 	scanf("%d",&num);
 	for(i=0;i<num;i++)
 	{
-		printf("µÚ%d¸öÈËµÄÃÜÂëÊÇ: ",i+1);
+		printf("ç¬¬%dä¸ªäººçš„å¯†ç æ˜¯: ",i+1);
 		scanf("%d",&a[i]);
 	 } 
-	LinkList Head=CreateLoop(7);
-	printf("ÇëÊäÈë³õÊ¼µÄ±¨ÊýÖµ£º ");
+	LinkList Head=CreateLoop(num);
+	printf("è¯·è¾“å…¥åˆå§‹çš„æŠ¥æ•°å€¼ï¼š ");
 	scanf("%d",&m); 
 	begin(Head,m);
 	system("pause");
 	return 0;
 }
 
-/*ÑùÀý¼ì²â 
+/*æ ·ä¾‹æ£€æµ‹ 
 int main()
 {
 	int a[]={3,1,7,2,4,8,4};
