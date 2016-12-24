@@ -60,7 +60,7 @@ void CreateHash(HashTable *H)
 	}
 }
 void ShowHash(HashTable *H){
-	printf("µØÖ·   ¹Ø¼ü×Ö   ËÑË÷³¤¶È   H(k)     Æ´Òô \n");
+	printf("åœ°å€   å…³é”®å­—   æœç´¢é•¿åº¦   H(k)     æ‹¼éŸ³ \n");
 	for(int i=1;i<=37;i++)
 	{ 
 		printf("%-5d  %-8d %-10d %-8d %-20s\n",i,H[i].key,H[i].count,H[i].hashk,H[i].name);
@@ -72,7 +72,7 @@ void SearchHash()
 	int j,key,s,addr,find;
 	char people[20];
 	j=0;key=0;find=0;
-	printf("ÇëÊäÈëÄãÒª²éÕÒµÄÈË:");
+	printf("è¯·è¾“å…¥ä½ è¦æŸ¥æ‰¾çš„äºº:");
 	scanf("%s",&people);
 	while(*(people+j)!='\0')
 	{
@@ -92,15 +92,15 @@ void SearchHash()
 		}
 	}while(H[addr].key!=key);	
 	if(find==1)
-	  printf("ÎŞ´Ë¼ÇÂ¼\n");
+	  printf("æ— æ­¤è®°å½•\n");
 	else
-	  printf("ĞÕÃû:%s ¹Ø¼ü×Ö:%d ²éÕÒ³¤¶È:%d\n",H[addr].name,H[addr].key,H[addr].count);
+	  printf("å§“å:%s å…³é”®å­—:%d æŸ¥æ‰¾é•¿åº¦:%d\n",H[addr].name,H[addr].key,H[addr].count);
 }
 
 
 int main(){
 	int op,i;
-	printf("1.ÏÔÊ¾¹şÏ£±í\n2.²éÕÒÈËÃû\n0.ÍË³ö³ÌĞò\n");
+	printf("1.æ˜¾ç¤ºå“ˆå¸Œè¡¨\n2.æŸ¥æ‰¾äººå\n0.é€€å‡ºç¨‹åº\n");
 	N[1].name="fuchaoxing";
 	N[2].name="huixinyu";	
 	N[3].name="zhaotianhao";
@@ -113,7 +113,7 @@ int main(){
 	N[10].name="yuruotong";
 	N[11].name="jianjiaqi";
 	N[12].name="gongjinchen";
-	N[13].name="muliangyu";
+	N[13].name="mouliangyu";
 	N[14].name="caoxipeng";
 	N[15].name="qiuli";
 	N[16].name="tanshngou";
@@ -154,6 +154,6 @@ int main(){
 			return 0;
 		}
 	}	
-	printf("\n1.ÏÔÊ¾¹şÏ£±í\n2.²éÕÒÈËÃû\n0.ÍË³ö³ÌĞò\n");
+	printf("\n1.æ˜¾ç¤ºå“ˆå¸Œè¡¨\n2.æŸ¥æ‰¾äººå\n0.é€€å‡ºç¨‹åº\n");
 	}
 }
